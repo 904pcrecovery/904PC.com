@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://904pc.com/sitemap.xml
