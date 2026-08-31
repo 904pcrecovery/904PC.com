@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>904 PC Recovery</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            var lastWidth = window.innerWidth;
+            var setViewportHeight = function () {
+                document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
+            };
+            setViewportHeight();
+            window.addEventListener('orientationchange', setViewportHeight);
+            window.addEventListener('resize', function () {
+                var currentWidth = window.innerWidth;
+                if (currentWidth !== lastWidth) {
+                    lastWidth = currentWidth;
+                    setViewportHeight();
+                }
+            });
+        })();
+    </script>
+</head>
+<body>
+
+    <!--NAV BAR-->
+    <nav class="navbar">
+        <a href="#">
+            <div> <img src= "logo.png" style="width: 151.25px; height: 43px;"> </div>
+        </a>
+            <button type="button" class="hamburger" id="hamburgerBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="intake.html">Get a Quote</a></li>
+            </ul>
+    </nav>
+
+<!--Hero Section?-->
+<header class="hero">
+    <div class="logo-group">
+        <div class="logo"> <img src= "logo2.png" style="width: 207.75px; height: 161.75px; margin-bottom: 20px;"> </div>
+        <span class="license-badge">Licensed in Florida</span>
+    </div>
+    <div class="cta-group">
+        <p style="margin-bottom: 0px;">Malware Removal | Data Recovery | Password Resets</p>
+        <a href="intake.html" class="btn">Get a Free Diagnosis</a>
+    </div>
+    <a href="#how-it-works" class="scroll-arrow" aria-label="Scroll to how it works">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+    </a>
+</header>
+
+<section class="how-it-works" id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+        <div class="step">
+            <span class="step-number">1</span>
+            <h3>Reach Out</h3>
+            <p>Message or call us with what's going on with your device.</p>
+        </div>
+        <div class="step">
+            <span class="step-number">2</span>
+            <h3>Free Diagnosis</h3>
+            <p>We take a look and give you an honest estimate before any work starts.</p>
+        </div>
+        <div class="step">
+            <span class="step-number">3</span>
+            <h3>We Fix It</h3>
+            <p>Fast turnaround, and your device comes back working like it should.</p>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h2>What We Do</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Light Malware Removal</h3>
+            <p>Full scan and cleanup to get your PC running safely again, no reinstall required in most cases.</p>
+        </div>
+        <div class="service-card">
+            <h3>Malware Deep Clean</h3>
+            <p>Aggressive removal for stubborn infections, rootkits, or repeat malware that basic scans keep missing.</p>
+        </div>
+        <div class="service-card">
+            <h3>File Recovery</h3>
+            <p>Software-side recovery for accidentally deleted files, corrupted drives, or failed updates.</p>
+        </div>
+        <div class="service-card">
+            <h3>Local Password Resets</h3>
+            <p>Locked out of a local Windows or Mac account? We can get you back in with proper ownership verification.</p>
+        </div>
+        <div class="service-card">
+            <h3>BIOS/UEFI Troubleshooting</h3>
+            <p>Boot issues, firmware settings, and startup errors diagnosed and resolved.</p>
+        </div>
+        <div class="service-card">
+            <h3>OS Install/Refresh</h3>
+            <p>Clean install or refresh of Windows or macOS to wipe out clutter and get your system running like new.</p>
+        </div>
+        <div class="service-card">
+            <h3>Performance Tune-up</h3>
+            <p>Speed up a slow PC by clearing startup bloat, junk files, and background processes weighing it down.</p>
+        </div>
+        <div class="service-card">
+            <h3>Data Backup</h3>
+            <p>Set up automatic or manual backups so your photos, documents, and files are never at risk again.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer" id="contact">
+    <h2>Get In Touch</h2>
+    <p>Serving Jacksonville, FL</p>
+    <p><a href="mailto:gethelp@904pc.com">GetHelp@904pc.com</a></p>
+    <p><a href="https://instagram.com/904pc" target="_blank" rel="noopener">Instagram: @904PC</a></p>
+    <p class="license-info">Licensed in Florida</p>
+</footer>
+
+<script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburgerBtn.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('is-open');
+        hamburgerBtn.classList.toggle('is-open', isOpen);
+        hamburgerBtn.setAttribute('aria-expanded', isOpen);
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('is-open');
+            hamburgerBtn.classList.remove('is-open');
+            hamburgerBtn.setAttribute('aria-expanded', false);
+        });
+    });
+</script>
+
+</body>
+</html>
