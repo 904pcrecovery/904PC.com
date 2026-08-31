@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Thank You | 904 PC Recovery</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            var lastWidth = window.innerWidth;
+            var setViewportHeight = function () {
+                document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
+            };
+            setViewportHeight();
+            window.addEventListener('orientationchange', setViewportHeight);
+            window.addEventListener('resize', function () {
+                var currentWidth = window.innerWidth;
+                if (currentWidth !== lastWidth) {
+                    lastWidth = currentWidth;
+                    setViewportHeight();
+                }
+            });
+        })();
+    </script>
+</head>
+<body>
+
+    <nav class="navbar">
+            <div class="logo"><img src="logo.png" alt="904 PC Recovery"></div>
+            <button type="button" class="hamburger" id="hamburgerBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="intake.html">Get a Quote</a></li>
+            </ul>
+    </nav>
+
+    <section class="thank-you">
+        <div class="thank-you-content">
+            <h1>Thanks — we got it!</h1>
+            <p>Your device intake form has been submitted. We'll reach out shortly to confirm your free diagnosis.</p>
+            <a href="index.html" class="btn">Back to Home</a>
+        </div>
+    </section>
+
+    <footer class="site-footer" id="contact">
+        <h2>Get In Touch</h2>
+        <p>Serving Jacksonville, FL</p>
+        <p><a href="mailto:gethelp@904pc.com">GetHelp@904pc.com</a></p>
+        <p><a href="https://instagram.com/904pc" target="_blank" rel="noopener">Instagram: @904PC</a></p>
+        <p class="license-info">Licensed in Florida</p>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburgerBtn.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('is-open');
+            hamburgerBtn.classList.toggle('is-open', isOpen);
+            hamburgerBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('is-open');
+                hamburgerBtn.classList.remove('is-open');
+                hamburgerBtn.setAttribute('aria-expanded', false);
+            });
+        });
+    </script>
+
+</body>
+</html>
