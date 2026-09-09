@@ -44,7 +44,90 @@
             </ul>
     </nav>
 
-  <script id='formScript7607899000000623844' src='https://us.bigin.online/org938377461/forms/device-intake-form?script=$sYG'></script>
+    <section class="intake-header">
+        <img src="logo2.png" alt="904 PC Recovery" class="intake-brand-mark">
+        <h1>Device Intake Form</h1>
+        <p>Tell us about your device and what's going on — we'll follow up with a free diagnosis.</p>
+    </section>
+
+    <section class="intake">
+        <form action="https://formsubmit.co/gethelp@904pc.com" method="POST" class="intake-form">
+
+            <!-- FormSubmit configuration -->
+            <input type="hidden" name="_subject" value="New Device Intake Submission — 904 PC Recovery">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://904pc.com/thank-you.html">
+            <input type="text" name="_honey" style="display:none">
+
+            <h2>Your Information</h2>
+            <div class="form-group">
+                <label for="fullName"><span class="required-indicator">*</span> Full Name</label>
+                <input type="text" id="fullName" name="Full Name" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone"><span class="required-indicator">*</span> Phone Number</label>
+                    <input type="tel" id="phone" name="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="email"><span class="required-indicator">*</span> Email Address</label>
+                    <input type="email" id="email" name="Email Address" required>
+                </div>
+            </div>
+
+            <h2>Device Information</h2>
+            <div class="form-group">
+                <label for="model"><span class="required-indicator">*</span> Device Model Number</label>
+                <input type="text" id="model" name="Model Number" required>
+            </div>
+
+            <h2>What's Going On?</h2>
+            <div class="form-group">
+                <label for="description"><span class="required-indicator">*</span> Describe the issue in your own words</label>
+                <textarea id="description" name="Issue Description" rows="6" placeholder="e.g. My laptop has been running really slow, and I keep getting pop-ups I don't recognize..." required></textarea>
+            </div>
+
+            <h2>What Do You Think You Need?</h2>
+            <p class="form-hint">Select all that apply — this just helps us prepare, we'll confirm after diagnosis.</p>
+            <div class="checkbox-grid">
+                <label class="checkbox-card">
+                    <input type="checkbox" name="Requested Services" value="Light Malware Removal">
+                    <span>Light Malware Removal</span>
+                </label>
+                <label class="checkbox-card">
+                    <input type="checkbox" name="Requested Services" value="Malware Deep Clean">
+                    <span>Malware Deep Clean</span>
+                </label>
+                <label class="checkbox-card">
+                    <input type="checkbox" name="Requested Services" value="File Recovery">
+                    <span>File Recovery</span>
+                </label>
+                <label class="checkbox-card">
+                    <input type="checkbox" name="Requested Services" value="Local Password Resets">
+                    <span>Local Password Resets</span>
+                </label>
+                <label class="checkbox-card">
+                    <input type="checkbox" name="Requested Services" value="BIOS/UEFI Troubleshooting">
+                    <span>BIOS/UEFI Troubleshooting</span>
+                </label>
+                <label class="checkbox-card">
+                    <input type="checkbox" name="Requested Services" value="OS Install/Refresh">
+                    <span>OS Install/Refresh</span>
+                </label>
+                <label class="checkbox-card">
+                    <input type="checkbox" name="Requested Services" value="Performance Tune-up">
+                    <span>Performance Tune-up</span>
+                </label>
+                <label class="checkbox-card">
+                    <input type="checkbox" name="Requested Services" value="Data Backup">
+                    <span>Data Backup</span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn submit-btn">Submit Intake Form</button>
+        </form>
+    </section>
 
     <footer class="site-footer" id="contact">
         <h2>Get In Touch</h2>
