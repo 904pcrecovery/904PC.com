@@ -27,7 +27,7 @@ html {
 }
 
 body    {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
     background-color: var(--bg);
     color: var(--ink);
     -webkit-font-smoothing: antialiased;
@@ -861,4 +861,14 @@ header::after {
     .checkbox-grid {
         grid-template-columns: 1fr;
     }
+}
+
+
+/* Call / text bar (phones only) */
+.call-bar { display: none; }
+@media (max-width: 768px) {
+    .call-bar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000; gap: 10px; background: #101820; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.25); }
+    .call-bar a { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 44px; border-radius: 8px; font-weight: 600; text-decoration: none; color: #101820; background: #DEA72A; }
+    .call-bar a + a { background: transparent; color: #FFFFFF; border: 2px solid #FFFFFF; }
+    body { padding-bottom: 76px; }
 }
